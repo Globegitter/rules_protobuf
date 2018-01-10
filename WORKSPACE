@@ -6,12 +6,10 @@ load("//protobuf:rules.bzl", "github_archive")
 # Go support requires rules_go
 # ================================================================
 
-github_archive(
+http_archive(
     name = "io_bazel_rules_go",
-    commit = "6d900bc95ae678bec5c91031b8e987957d2a7f93",  # post-0.7.0 (includes important cross-compile fixes)
-    org = "bazelbuild",
-    repo = "rules_go",
-    sha256 = "d36baba631b29151434726eb204fa93ce8793b5f8ef96da452f382d77bd95c93",
+    url = "https://github.com/bazelbuild/rules_go/releases/download/0.8.1/rules_go-0.8.1.tar.gz",
+    sha256 = "90bb270d0a92ed5c83558b2797346917c46547f6f7103e648941ecdb6b9d0e72",
 )
 
 load("@io_bazel_rules_go//go:def.bzl", "go_rules_dependencies", "go_register_toolchains")
