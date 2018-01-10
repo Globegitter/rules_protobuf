@@ -8,8 +8,9 @@ load("//protobuf:rules.bzl", "github_archive")
 
 http_archive(
     name = "io_bazel_rules_go",
-    url = "https://github.com/bazelbuild/rules_go/releases/download/0.8.1/rules_go-0.8.1.tar.gz",
-    sha256 = "90bb270d0a92ed5c83558b2797346917c46547f6f7103e648941ecdb6b9d0e72",
+    strip_prefix = "rules_go-ec06a697acee088146fe9a45e6ebe1a3a022efa0",
+    # sha256 = "bad35f481c7ca1b3bb3e12d738dfd3f9318073a991fd50d8dc27dffb68b5e23a",
+    url = "https://github.com/bazelbuild/rules_go/archive/ec06a697acee088146fe9a45e6ebe1a3a022efa0.tar.gz",
 )
 
 load("@io_bazel_rules_go//go:def.bzl", "go_rules_dependencies", "go_register_toolchains")
